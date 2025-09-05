@@ -77,13 +77,27 @@
             white-space: pre-wrap;
             line-height: 1.5;
         }
+
+        .github-link {
+            font-size: 12px;
+            color: #777;
+            text-decoration: none;
+            margin-bottom: -10px;
+            display: block;
+        }
+        .github-link:hover {
+            color: #4285f4;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <a href="https://github.com/NyanPunch" class="github-link">
+        당첨된다면 제작자에게 팁을 주세요...
+    </a>
     <h1>복권 번호 생성기 🎰</h1>
-
     <div class="section">
         <h2>로또 6/45</h2>
         <div class="input-group">
@@ -107,9 +121,13 @@
         <button onclick="generatePensionNumbers()">번호 생성</button>
         <div id="pension-numbers" class="numbers"></div>
     </div>
+    <a href="https://github.com/NyanPunch" class="github-link">
+        GitHub @NyanPunch
+    </a>
 </div>
 
 <script>
+    // 로또 번호 생성 함수 (변경 없음)
     function generateLottoNumbers() {
         const count = parseInt(document.getElementById('lotto-count').value, 10);
         const lottoOutput = document.getElementById('lotto-numbers');
